@@ -1,0 +1,18 @@
+page{
+  background-color: #f6f6f6;
+}
+.show-view{
+  margin-top: 40rpx;
+  width: 680rpx;
+}
+.none-view{
+  margin-top: 200rpx;
+  z-index: 9;
+  width: 750rpx;
+  height: 70vh;
+  align-items: center;
+}
+.none-view>image{
+  width: 567rpx;
+  height: 567rpx;
+}

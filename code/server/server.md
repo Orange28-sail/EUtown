@@ -1,0 +1,1 @@
+json-server --host 192.168.1.* db.json 

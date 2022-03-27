@@ -1,0 +1,70 @@
+<view class="status-view row">
+  <image class="lib_icon" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/lib.png?sign=3e0dff99ce101b106cbea2bcd168a12e&t=1641819202"></image>
+  <view class="lib_name">{{lib.name}}</view>
+  <view class="num_view row"><span style="display: block;">{{cur_word.index}}</span>
+    <view style="line-height: 32rpx;">/ {{lib.cont.length}}</view>
+  </view>
+</view>
+<view class="word-view column">
+  <view class="word">{{cur_word.name}}</view>
+  <view class="phone row">
+    <view><span style="color: #5e5dff;">英</span>： [{{cur_word.uk_phone}}] </view>
+    <view><span style="color: #05d194;">美</span>： [{{cur_word.us_phone}}]</view>
+  </view>
+</view>
+<view wx:if="{{!isShow}}" class="show_btn row" bindtap="onDetail">
+  <van-icon name="bulb-o" size="40rpx" color="#8a8a8a" />
+  <view class="tit">产看详情</view>
+</view>
+<view wx:if="{{isShow}}" class="detail_view column">
+  <view class="tran_res row"><span>{{cur_word.tran[0].pos}}.</span> {{cur_word.tran[0].tranCn}}</view>
+  <view class="root_view" wx:if="{{cur_word.rel_word}}">
+    <view class="tit">{{cur_word.rel_word.desc}}</view>
+    <view class="cont_view">
+      <view class="cont_item" wx:for="{{cur_word.rel_word.rels}}" wx:for-item="item" wx:key="id">
+        <view class="class"><span style="margin-right: 4rpx;">-</span>{{item.pos}}</view>
+        <view class="words row" wx:for="{{item.words}}" wx:for-item="item" wx:key="id">
+          <view style="margin-right: 20rpx;">{{item.hwd}}</view>
+          <view>{{item.tran}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="same_view" wx:if="{{cur_word.syno}}">
+    <view class="tit">{{cur_word.syno.desc}}</view>
+    <view class="cont_view">
+      <view class="cont_item" wx:for="{{cur_word.syno.synos}}" wx:for-item="item" wx:key="id">
+        <view class="class row">
+          <view style="margin-right: 20rpx;color: #05d194;">{{item.pos}}</view>
+          <block wx:for="{{item.hwds}}" wx:for-item="item" wx:key="id">
+            <view>{{item.w}}</view>
+          </block>
+        </view>
+        <view class="tran">{{item.tran}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="sentence_view" wx:if="{{cur_word.sentence}}">
+    <view class="tit">{{cur_word.sentence.desc}}</view>
+    <view class="cont_view">
+      <view class="cont_item" wx:for="{{cur_word.sentence.sentences}}" wx:for-item="item" wx:key="id">
+        <view style="color: #05d194;margin-bottom: 20rpx;">{{index+1}}.{{item.sContent}}</view>
+        <view style="padding-left:25rpxF;">{{item.sCn}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="phrase_view">
+    <view class="tit">{{cur_word.phrase.desc}}</view>
+    <view class="cont_view">
+      <view class="cont_item" wx:for="{{cur_word.phrase.phrases}}" wx:for-item="item" wx:key="id">
+        <view class="phraes_En">{{item.pContent}}</view>
+        <view class="phraes_Cn">{{item.pCn}}</view>
+      </view>
+    </view>
+  </view> -->
+</view>
+<view class="btn_view row">
+  <view bindtap="onPrev">上一词</view>
+  <view bindtap="onNext">下一词</view>
+</view>
+<van-toast id="van-toast" />

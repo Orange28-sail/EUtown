@@ -1,0 +1,252 @@
+page {
+  background-image: linear-gradient(to right, rgb(94, 93, 255, 0.1), rgb(5, 209, 148, 0.1));
+}
+
+.status-view {
+  width: 680rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.lib_icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.lib_name {
+  max-width: 410rpx;
+  color: #000000;
+  margin-right: 30rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.num_view {
+  min-width: 200rpx;
+  max-width: 250rpx;
+  height: 40rpx;
+  color: #5e5dff;
+  font-size: 28rpx;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.num_view>span {
+  display: block;
+  margin-right: 10rpx;
+  font-size: 40rpx;
+  line-height: 40rpx;
+  color: #05d194;
+}
+
+.word-view {
+  margin-top: 200rpx;
+  align-items: center;
+}
+
+.word-view>.word {
+  font-size: 80rpx;
+  font-weight: 500;
+}
+
+.word-view>.phone {
+  margin-top: 50rpx;
+  color: #8a8a8a;
+  align-items: center;
+}
+
+.word-view>.phone>view:first-child {
+  margin-right: 40rpx;
+}
+
+.show_btn {
+  padding: 0 22rpx;
+  margin-top: 70rpx;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  border: 2rpx solid #8a8a8a;
+  font-size: 26rpx;
+  color: #8a8a8a;
+  align-items: center;
+}
+
+.show_btn>.tit {
+  margin-left: 6rpx;
+}
+
+.btn_view {
+  z-index: 9;
+  position: fixed;
+  bottom: 250rpx;
+  width: 640rpx;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.btn_view>view:first-child {
+  width: 300rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  text-align: center;
+  line-height: 88rpx;
+  background-color: #5e5dff;
+  color: #fff;
+  font-weight: 550;
+  letter-spacing: 8rpx;
+  text-indent: 8rpx;
+}
+
+.btn_view>view:last-child {
+  width: 300rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  text-align: center;
+  line-height: 88rpx;
+  background-color: #05d194;
+  color: #fff;
+  font-weight: 550;
+  letter-spacing: 8rpx;
+  text-indent: 8rpx;
+}
+
+.detail_view {
+  margin-top: 70rpx;
+  width: 660rpx;
+  align-items: center;
+  margin-bottom: 380rpx;
+}
+
+.tran_res {
+  font-size: 50rpx;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 30rpx;
+}
+
+.tran_res>span {
+  display: block;
+  margin-right: 20rpx;
+  color: #24adf3;
+}
+
+.root_view {
+  width: 660rpx;
+}
+
+.root_view>.tit {
+  width: 80rpx;
+  height: 40rpx;
+  background-color: #05d194;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+  letter-spacing: 4rpx;
+  text-indent: 4rpx;
+}
+
+.root_view>.cont_view {
+  margin-top: 30rpx;
+  width: 660rpx;
+  height: auto;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  background-color: #e0e7f7;
+}
+
+.root_view>.cont_view>.cont_item {
+  margin-bottom: 20rpx;
+}
+
+.root_view>.cont_view>.cont_item:last-child {
+  margin-bottom: 0rpx !important;
+}
+.root_view > .cont_view > .cont_item > .class {
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+  color: #05d194;
+}
+.root_view > .cont_view > .cont_item > .words {
+  margin: 10rpx 0;
+}
+.same_view{
+  margin-top: 40rpx;
+  width: 660rpx;
+}
+.same_view > .tit {
+  width: 80rpx;
+  height: 40rpx;
+  background-color: #809cf6;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+  letter-spacing: 4rpx;
+  text-indent: 4rpx;
+}
+.same_view > .cont_view {
+  margin-top: 30rpx;
+  width: 660rpx;
+  height: auto;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  background-color: #e0e7f7;
+}
+.same_view > .cont_view > .cont_item {
+  margin-bottom: 20rpx;
+}
+.same_view > .cont_view > .cont_item:last-child {
+  margin-bottom: 0rpx !important;
+}
+.same_view > .cont_view > .cont_item > .class {
+  width: inherit;
+  font-size: 30rpx;
+  color: #000000;
+  margin-bottom: 20rpx;
+  flex-wrap: wrap;
+}
+.sentence_view {
+  margin-top: 40rpx;
+  width: 660rpx;
+}
+
+.sentence_view > .tit {
+  width: 80rpx;
+  height: 40rpx;
+  background-color: #24adf3;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+  letter-spacing: 4rpx;
+  text-indent: 4rpx;
+}
+.sentence_view > .cont_view {
+  margin-top: 30rpx;
+  width: 660rpx;
+  height: auto;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  background-color: #e0e7f7;
+}
+
+.sentence_view > .cont_view > .cont_item {
+  margin-bottom: 20rpx;
+}
+
+.sentence_view > .cont_view > .cont_item:last-child {
+  margin-bottom: 0rpx !important;
+}

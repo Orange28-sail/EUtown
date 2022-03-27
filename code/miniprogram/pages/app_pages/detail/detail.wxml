@@ -1,0 +1,61 @@
+
+<view  class="res-view column">
+  <view class="res_name">
+    <van-divider contentPosition="left" custom-style="font-size:60rpx; border-color:#cecece; color:#000000;">
+      {{search_res.name}}
+    </van-divider>
+  </view>
+  <view class="phone_view row">
+    <view style="margin-right: 40rpx; color: #cecece;">
+      <span style="color: #5e5dff;">英</span>
+      ：[{{search_res.uk_phone}}]
+    </view>
+    <view style="color: #cecece;">
+      <span style="color: #05d194;">美</span>
+      ：[{{search_res.us_phone}}]
+    </view>
+  </view>
+  <view class="content_view row">
+    <view style="margin-right: 10rpx;">{{search_res.tran[0].pos}}.</view>
+    <view>{{search_res.tran[0].tranCn}}</view>
+  </view>
+  <view wx:if="{{search_res.rel_word}}" class="root_view">
+    <view class="tit">{{search_res.rel_word.desc}}</view>
+    <view class="cont_view">
+      <view class="cont_item" wx:for="{{search_res.rel_word.rels}}" wx:for-item="item" wx:key="index">
+        <view class="class">
+          <span style="margin-right: 4rpx;">-</span>
+          {{item.pos}}
+        </view>
+        <view class="row cell" wx:for="{{item.words}}" wx:for-item="item" wx:key="index">
+          <view style="margin-right: 20rpx;">{{item.hwd}}</view>
+          <view>{{item.tran}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{search_res.syno}}" class="same_view">
+    <view class="tit">{{search_res.syno.desc}}</view>
+    <view class="cont_view">
+      <view class="cont_item" wx:for="{{search_res.syno.synos}}" wx:for-item="item" wx:key="index">
+        <view class="class row">
+          <view style="margin-right: 20rpx;color: #05d194;">{{item.pos}}.</view>
+          <block wx:for="{{item.hwds}}" wx:for-item="item" wx:key="index">
+            <view>{{item.w}}，</view>
+          </block>
+        </view>
+        <view>{{item.tran}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{search_res.sentence}}" class="sentence_view">
+    <view class="tit">{{search_res.sentence.desc}}</view>
+    <view class="cont_view">
+      <view class="cont_item" wx:for="{{search_res.sentence.sentences}}" wx:for-item="item" wx:key="index">
+        <view style="color: #05d194;margin-bottom: 20rpx;">{{index+1}}.{{item.sContent}}</view>
+        <view style="padding-left:25rpx;">{{item.sCn}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<van-toast id="van-toast" />

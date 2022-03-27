@@ -1,0 +1,30 @@
+<van-tabs id="tabs" active="{{active}}" sticky type="line" color="#5e5dff" swipeable title-active-color="#5e5dff">
+  <van-tab title="全部">
+    <!-- tab1 -->
+    <view wx:if="{{wordBook.length>0}}" class="show-view">
+      <van-index-bar highlight-color="#000000"  sticky="{{false}}" index-list="{{index_list}}">
+        <view wx:for="{{wordBook}}" wx:key="index" wx:for-item="item">
+          <van-index-anchor index="{{item.title}}"></van-index-anchor>
+          <van-cell bindtap="toDetail" wx:for="{{item.items}}" wx:key="index" wx:for-item="item" title="{{item.name}}" value="{{item.pos}}. {{item.tran}}" data-name="{{item.name}}"/>
+        </view>
+      </van-index-bar>
+    </view>
+    <view wx:else class="none-view column">
+     <image src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/no-data.png?sign=9e5fed8070a79f5f72fde77b262762c3&t=1641908313"></image>
+    </view>
+  </van-tab>
+  <van-tab title="已学习">
+    <!-- tab2 -->
+    <view wx:if="{{learnedBook.length>0}}" class="show-view">
+      <van-index-bar sticky-offset-top="150rpx" sticky="{{false}}">
+        <view wx:for="{{learnedBook}}" wx:key="index" wx:for-item="item">
+          <van-index-anchor index="{{item.title}}"></van-index-anchor>
+          <van-cell bindtap="toDetail" wx:for="{{item.items}}" wx:key="index" wx:for-item="item" title="{{item.name}}" value="{{item.pos}}. {{item.tran}}" data-name="{{item.name}}"/>
+        </view>
+      </van-index-bar>
+    </view>
+    <view wx:else class="none-view column">
+     <image src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/no-data.png?sign=9e5fed8070a79f5f72fde77b262762c3&t=1641908313"></image>
+    </view>
+  </van-tab>
+</van-tabs>

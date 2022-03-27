@@ -1,0 +1,80 @@
+<!-- user-view -->
+<view class="top column">
+  <view class="user-card row">
+    <view class="user-img">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="user-info row">
+      <view class="row" style="margin-top: 10rpx;">
+        <view class="wel-word">Hi,</view>
+        <open-data class="user_name" type="userNickName"></open-data>
+      </view>
+    </view>
+    <view class="search-view row" bindtap="toSearch_page">
+      <image class="search-label" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/search.png?sign=0f69a233368fd6746bb8c59ab7f57ec3&t=1641373879"></image>
+      <input class="search row" placeholder="查词" placeholder-style="color:#dbdbdb;" type="text" disabled="false">
+      </input>
+    </view>
+  </view>
+  <view class="stu-view row">
+    <view class="stu-static">累计学习 <span>{{learnedWords}}</span> 词
+    </view>
+    <view style="color:#ffffff;letter-spacing: 4rpx;">k<span style="color: #fdff30;">ee</span>p w<span style="color: #fdff30;">a</span>lk<span style="color: #fdff30;">ing</span></view>
+  </view>
+  <view class="word-view column">
+    <view class="book-view row">
+      <view class="book-name">{{lib.name}}</view>
+      <view class="book-lib" bindtap="toLib">修改计划
+        <van-icon name="arrow" />
+      </view>
+    </view>
+    <view class="icon-view">
+      <view class="icon-card">词书</view>
+    </view>
+    <view class="progress-view column">
+      <view class="pro-status row">
+        <view class="pro-static">
+          <span>{{learnedWords}}</span> / {{lib.cont.length}}词
+        </view>
+        <view class="pro-sign"><span>G</span>o <span>f</span>or <span>i</span>t <sapn style="color: #5e5dff;">!</sapn>
+        </view>
+      </view>
+      <view class="pro-line">
+        <van-progress percentage="{{progress}}" pivot-color="#05d49e" color="linear-gradient(to right, #7eeca8, #05d49e)" />
+      </view>
+    </view>
+  </view>
+</view>
+<view class="fun-btn-view row">
+  <view class="stu-btn btn" bindtap="toRecite">背单词</view>
+  <view class="rev-btn btn" bindtap="toSign">单词本</view>
+</view>
+
+<view class="tit-bar row">
+  <view class="tit-name">每日一句</view>
+  <view class="tit-del">sentence</view>
+  <!-- <van-icon class="tit-bar-icon" name="eye-o" /> -->
+  <image id="sentence_fresh" class="tit-bar-icon" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/fresh.png?sign=f8c7175d30b53a883468c28023bbd8e8&t=1641534126" bindtap="sentenceFresh"></image>
+</view>
+<view class="sentence-view row">
+  <view class="sentence-display">
+    <view class="En">{{sentence_en}}</view>
+    <view class="Cn">{{sentence_zh}}</view>
+  </view>
+</view>
+<view class="cour-swiper">
+  <swiper indicator-dots="{{false}}" indicator-active-color="white" autoplay="true" interval="2000" class="cour-swiper-item">
+    <swiper-item class="cour-swiper-item">
+      <image style="width:100%;height:100%" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/cour-swiper1.png?sign=bdd9b5509f8697c43269ce7960781a2b&t=1623610716">
+      </image>
+    </swiper-item>
+    <swiper-item class="cour-swiper-item">
+      <image style="width:100%;height:100%" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/cour-swiper2.png?sign=e5b05f4cd918af3ee7890836a22adfcc&t=1623610883">
+      </image>
+    </swiper-item>
+    <swiper-item class="cour-swiper-item">
+      <image style="width:100%;height:100%" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/cour-swiper3.png?sign=67339e29bfe230dde83176559f67c881&t=1623610897">
+      </image>
+    </swiper-item>
+  </swiper>
+</view>

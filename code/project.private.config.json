@@ -1,0 +1,54 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/app_pages/search/search",
+          "pathName": "pages/app_pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/app_pages/translate/translate",
+          "pathName": "pages/app_pages/translate/translate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/app_pages/sign/sign",
+          "pathName": "pages/app_pages/sign/sign",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/app_pages/recite/recite",
+          "pathName": "pages/app_pages/recite/recite",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/app_pages/sign/sign",
+          "pathName": "pages/app_pages/sign/sign",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/app_pages/lib/lib",
+          "pathName": "pages/app_pages/lib/lib",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

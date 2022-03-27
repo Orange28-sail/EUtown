@@ -1,0 +1,52 @@
+<view class="input-view row">
+  <image class="input-icon" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/search.png?sign=0f69a233368fd6746bb8c59ab7f57ec3&t=1641373879"></image>
+  <input type="text" focus value="{{search_val}}" class="input" placeholder="请输入需要翻译的单词或句子" placeholder-style="font-size:30rpx;" confirm-type="done" bindconfirm="onInput" ></input>
+  <view class="concel" bindtap="onCancel">取消</view>
+</view>
+<view wx:if="{{!isSearch}}" class="history_view column">
+  <block wx:if="{{history_list.length>0}}">
+    <view class="tit_bar row">
+      <view>查询记录</view>
+      <view bindtap="onClear">清除记录</view>
+    </view>
+    <view class="history_item row" wx:for="{{history_list}}" wx:for-item="item" wx:key="index">
+      <view class="search_val">{{item.tran_val}}</view>
+      <view class="search_res">{{item.tran_res}}</view>
+    </view>
+  </block>
+</view>
+<block wx:if="{{isSearch}}">
+  <view class="check-view row">
+    <view>自动检测到</view>
+    <view class="tran-from">{{tran_from}}</view>
+    <image class="tran-icon" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/translate.png?sign=7ed11e97fc80449609f434ce2d16a6a3&t=1641742211"></image>
+    <view class="tran-to">{{tran_to}}</view>
+  </view>
+  <view class="val-view">
+    {{search_val}}
+    <image class="copy" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/copy.png?sign=b21bbcb8546a9f8c926d63ffa33a4541&t=1641744902" data-type="from" bindtap="onCopy"></image>
+  </view>
+  <view class="tit_bar">翻译</view>
+  <view class="show-view">
+    <view class="tit">翻译结果</view>
+    {{search_res}}
+    <image class="copy" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/copy.png?sign=b21bbcb8546a9f8c926d63ffa33a4541&t=1641744902" data-type="to" bindtap="onCopy"></image>
+  </view>
+  <view class="cour-swiper">
+    <swiper indicator-dots="{{false}}" indicator-active-color="white" autoplay="true" interval="2000" class="cour-swiper-item">
+      <swiper-item class="cour-swiper-item">
+        <image style="width:100%;height:100%" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/cour-swiper1.png?sign=bdd9b5509f8697c43269ce7960781a2b&t=1623610716">
+        </image>
+      </swiper-item>
+      <swiper-item class="cour-swiper-item">
+        <image style="width:100%;height:100%" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/cour-swiper2.png?sign=e5b05f4cd918af3ee7890836a22adfcc&t=1623610883">
+        </image>
+      </swiper-item>
+      <swiper-item class="cour-swiper-item">
+        <image style="width:100%;height:100%" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/cour-swiper3.png?sign=67339e29bfe230dde83176559f67c881&t=1623610897">
+        </image>
+      </swiper-item>
+    </swiper>
+  </view>
+</block>
+<van-toast id="van-toast" />

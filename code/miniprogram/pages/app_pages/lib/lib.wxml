@@ -1,0 +1,9 @@
+<view class="lib-cell row">
+  <image class="lib-icon" src="https://7361-sail28-3grjhb8od3d98750-1306160525.tcb.qcloud.la/img/book-icon.png?sign=ed0513ee747ecd270a66b340e43a5cba&t=1641913477"></image>
+  <view class="info-view">
+    <view class="name">四级考前30天必背</view>
+    <view class="total">共595词</view>
+  </view>
+  <image class="btn" src="cloud://sail28-3grjhb8od3d98750.7361-sail28-3grjhb8od3d98750-1306160525/img/select.png"></image>
+</view>
+<van-divider class="tip" contentPosition="center">暂时只有以上词本</van-divider>

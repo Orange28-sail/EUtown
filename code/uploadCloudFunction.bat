@@ -1,0 +1,1 @@
+"D:\WeChat开发\微信web开发者工具\cli.bat" cloud functions deploy --e sail28-3grjhb8od3d98750 --n quickstartFunctions --r --project "D:\panyl\微信小程序\英美镇" --report_first --report

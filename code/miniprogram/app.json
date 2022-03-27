@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/app_pages/index/index",
+    "pages/app_pages/translate/translate",
+    "pages/app_pages/sign/sign",
+    "pages/app_pages/lib/lib",
+    "pages/app_pages/detail/detail",
+    "pages/app_pages/recite/recite",
+    "pages/app_pages/search/search"
+  ],
+  "usingComponents": {
+    "van-progress": "@vant/weapp/progress/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-toast": "@vant/weapp/toast/index" ,"van-divider": "@vant/weapp/divider/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-index-bar": "@vant/weapp/index-bar/index",
+    "van-index-anchor": "@vant/weapp/index-anchor/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  },
+  "tabBar": {
+    "color": "#000000s",
+    "selectedColor": "#5e5dff",
+    "backgroundColor": "#f6f6f6",
+    "list": [{
+        "text": "背单词",
+        "pagePath": "pages/app_pages/index/index",
+        "iconPath": "icon/En.png",
+        "selectedIconPath": "icon/En-selected.png"
+      },
+      {
+        "text": "翻译",
+        "pagePath": "pages/app_pages/translate/translate",
+        "iconPath": "icon/Pr.png",
+        "selectedIconPath": "icon/Pr-selected.png"
+      },
+      {
+        "text": "单词本",
+        "pagePath": "pages/app_pages/sign/sign",
+        "iconPath": "icon/Town.png",
+        "selectedIconPath": "icon/Town-selected.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#5e5dff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5e5dff",
+    "navigationBarTitleText": "英美镇",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}
